@@ -9,6 +9,7 @@ module.exports = function (grunt) {
         pkg: grunt.file.readJSON('package.json'),
 
         local: grunt.file.readJSON('properties.local.json'),
+        prod: grunt.file.readJSON('properties.prod.json'),
 
         paths: {
             dev: 'dev',
@@ -134,6 +135,7 @@ module.exports = function (grunt) {
                 src: [
                     '<%= paths.app %>/assets/js/app/app.js',
                     '<%= paths.app %>/assets/js/app/config/routes.js',
+                    '<%= paths.app %>/assets/js/app/config/run.js',
                     '<%= paths.app %>/assets/js/app/config/constants.js',
                     '<%= paths.app %>/assets/js/services.js',
                     '<%= paths.app %>/assets/js/controllers.js',
@@ -249,10 +251,6 @@ module.exports = function (grunt) {
                         {
                             match: 'service_url',
                             replacement: '<%= local.service_url %>'
-                        },
-                        {
-                            match: 'cookie_length',
-                            replacement: '<%= local.cookie_length %>'
                         }
                     ]
                 },
@@ -265,20 +263,16 @@ module.exports = function (grunt) {
                     }
                 ]
             },
-            vmd: {
+            prod: {
                 options: {
                     patterns: [
                         {
                             match: 'env',
-                            replacement: '<%= vmd.env %>'
+                            replacement: '<%= prod.env %>'
                         },
                         {
                             match: 'service_url',
-                            replacement: '<%= vmd.service_url %>'
-                        },
-                        {
-                            match: 'cookie_length',
-                            replacement: '<%= vmd.cookie_length %>'
+                            replacement: '<%= prod.service_url %>'
                         }
                     ]
                 },
@@ -296,8 +290,8 @@ module.exports = function (grunt) {
     });
 
     grunt.registerTask('test', ['jshint', 'karma:unit']);
-    grunt.registerTask('build-local', ['replace:local']);
-    grunt.registerTask('js', ['jshint', 'clean:js', 'concat:libs', 'concat:controllers', 'concat:directives', 'concat:services', 'copy:app', 'uglify:appjs', 'clean:appjs']);
+    grunt.registerTask('build-local', ['replace:local', 'uglify:appjs', 'clean:appjs']);
+    grunt.registerTask('js', ['jshint', 'clean:js', 'concat:libs', 'concat:controllers', 'concat:directives', 'concat:services', 'copy:app']);
     grunt.registerTask('scss', ['clean:css', 'sass:prod', 'autoprefixer:site']);
     grunt.registerTask('fonts', ['clean:fonts', 'copy:fonts']);
     grunt.registerTask('images', ['clean:images', 'copy:images']);
@@ -306,7 +300,7 @@ module.exports = function (grunt) {
     grunt.registerTask('html', ['clean:html', 'copy:html']);
     grunt.registerTask('templates', ['clean:templates', 'copy:templates']);
 
-    grunt.registerTask('dev', ['js', 'build-local', 'scss', 'images', 'fonts', 'html', 'templates', 'root', 'connect:dev', 'api', 'watch']);
+    grunt.registerTask('dev', ['js', 'build-local', 'scss', 'images', 'fonts', 'html', 'templates', 'root', 'api', 'watch']);
 
     // Targets
     grunt.registerTask('default', ['js', 'build-local', 'scss', 'images', 'fonts', 'html', 'templates', 'root', 'api']);

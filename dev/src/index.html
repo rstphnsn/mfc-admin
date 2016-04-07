@@ -4,15 +4,22 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <title>Base Project - Angular</title>
+    <title>Manor Farm Cottages: ADMIN</title>
     <link href="assets/css/styles.css" rel="stylesheet">
     <script src="assets/js/libs.min.js"></script>
     <script src="assets/js/app.min.js"></script>
     <script>document.documentElement.className=document.documentElement.className.replace('no-js','js');</script>
-
 </head>
 
 <body ng-app="App">
+
+    <header class="app-header">
+        <img src="assets/images/logo.svg" alt="MFC logo">
+        <h1>MFC Admin</h1>
+        <div ng-show="$root.user" class="cta app-logout" ng-controller="LogoutController as vm">
+            <a href="" ng-click="vm.logout()">Logout</a>
+        </div>
+    </header>
 
     <div class="container" ui-view></div>
 

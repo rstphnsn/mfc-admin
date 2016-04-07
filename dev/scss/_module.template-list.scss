@@ -1,0 +1,220 @@
+//  ## TEMPLATE LIST  ---------------------------------------------------------------//
+
+.template-list {
+    background-color: #555;
+    box-sizing: border-box;
+    width: 300px;
+    position: absolute;
+    top: 56px;
+    left: 0;
+    width: 25%;
+}
+
+.template-list h3 {
+    color: #BBB;
+    font-size: 16px;
+    font-weight: 200;
+    letter-spacing: 0.1em;
+    margin: 0;
+    padding: 15px 5px 10px 15px;
+    text-transform: uppercase;
+}
+
+.template-list-pane {
+    min-height: 500px;
+    overflow-y: scroll;
+}
+
+.template-list-pane::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.template-list-pane::-webkit-scrollbar:vertical {
+    width: 11px;
+}
+
+.template-list-pane::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 2px solid #555;
+    border-radius: 8px;
+}
+
+.template-list-pane::-webkit-scrollbar-track {
+    background-color: #555;
+}
+
+.template-list-filter {
+    box-sizing: border-box;
+    display: none;
+    height: 45px;
+    padding: 5px;
+    width: 100%;
+}
+
+.template-list-filter .filter {
+    background-color: #FFF;
+    height: 40px;
+    width: 100%;
+}
+
+.template-list .template-item {
+    background-color: #DDD;
+    cursor: pointer;
+    display: block;
+    margin: 0 5px 5px;
+    overflow: hidden;
+    padding: 12px 85px 10px 40px;
+    position: relative;
+}
+
+.template-list .template-item span {
+    display: block;
+}
+
+.template-item::after {
+    background-color: #555;
+    content: '';
+    display: block;
+    height: 3px;
+    left: 13px;
+    position: absolute;
+    top: 21px;
+    width: 15px;
+}
+
+.template-item::before {
+    background-color: #555;
+    content: '';
+    display: block;
+    height: 15px;
+    left: 19px;
+    position: absolute;
+    top: 15px;
+    width: 3px;
+}
+
+.btn.btn_create,
+.btn.btn_delete {
+    background-color: $base--linkColor;
+    border-radius: 4px;
+    color: white;
+    display: inline-block;
+    font-size: 12px;
+    padding: 5px 10px 3px;
+    position: absolute;
+    right: 10px;
+    text-transform: uppercase;
+    top: 10px;
+}
+
+.loading .template-item::before,
+.expanded .template-item::before {
+    display: none;
+}
+
+.loading .template-item::after {
+    animation: rotate 0.6s linear infinite;
+    background-color: transparent;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.5);
+    border-left: 3px solid rgba(0, 0, 0, 0.5);
+    border-radius: 100%;
+    border-right: 3px solid rgba(0, 0, 0, 0);
+    border-top: 3px solid rgba(0, 0, 0, 0.5);
+    content: "";
+    display: block;
+    height: 11px;
+    left: 12px;
+    opacity: 1;
+    position: absolute;
+    top: 14px;
+    width: 11px;
+}
+
+
+//  ## TEMPLATE LIST - PASSES  ------------------------------------------------------//
+
+.template-list .template .pass {
+    background-color: #BBB;
+    color: $base--linkColor;
+    cursor: pointer;
+    display: block;
+    margin: 5px;
+    padding: 12px 10px 8px 10px; // Nudging text down to vertically center align better - Numbers have no decenders
+    position: relative;
+}
+
+.template-list .template .pass-new {
+    padding-left: 40px;
+}
+
+.template-list .template .pass-active {
+    background-color: #CCC;
+}
+
+.template-list .template .pass-new::before {
+    background-color: #569D10;
+    border-radius: 12px;
+    content: '';
+    display: block;
+    height: 12px;
+    left: 14px;
+    margin-top: -6px;
+    position: absolute;
+    top: 50%;
+    width: 12px;
+}
+
+.template-list .template .pass .btn.btn_delete {
+    background-color: rgba(255, 0, 0, 0.3);
+    display: block;
+    padding: 0;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
+    top: 12px;
+}
+
+.template-list .template .pass .btn.btn_delete:hover {
+    background-color: rgba(255, 0, 0, 0.5);
+}
+
+.template-list .template .pass .btn.btn_delete::before {
+    background-color: #CCC;
+    content: '';
+    display: block;
+    height: 2px;
+    left: 50%;
+    margin-left: -6px;
+    margin-top: -1px;
+    position: absolute;
+    top: 50%;
+    width: 12px;
+}
+
+.template-list .template .pass .btn.btn_delete::after {
+    background-color: #CCC;
+    content: '';
+    display: block;
+    height: 12px;
+    left: 50%;
+    margin-left: -1px;
+    margin-top: -6px;
+    position: absolute;
+    top: 50%;
+    width: 2px;
+}
+
+
+//  ## TEMPLATE LIST - WARNINGS  ----------------------------------------------------//
+
+.template-list .template .warning {
+    background-color: #EEC6C1;
+    margin: 5px;
+    padding: 10px;
+}
+
+.template-list .template .warning p {
+    color: #CF5F5F;
+    margin: 0;
+}

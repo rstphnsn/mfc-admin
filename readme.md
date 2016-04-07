@@ -1,4 +1,4 @@
-# Base Project - Angular
+# MFC ADMIN - Angular
 
 ## Introduction
 
@@ -7,7 +7,7 @@
 
 Clone the repo
 
-`git clone https://github.com/rstphnsn/base-project-angular.git base-project-angular`
+`git clone https://github.com/rstphnsn/mfc-admin.git mfc-admin`
 
 Install the app’s node dependencies
 

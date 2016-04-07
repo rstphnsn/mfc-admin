@@ -1,0 +1,23 @@
+//  ## LAYOUT  ----------------------------------------------------------------------//
+
+
+html,
+body {
+    background-color: $base--backgroundColor;
+}
+
+.content {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 50px;
+}
+
+
+.page-login .content {
+    max-width: 600px;
+}
+
+
+//  ## PROJECT LIST VIEW SPECIFIC  --------------------------------------------------//
+
+

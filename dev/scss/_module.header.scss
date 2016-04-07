@@ -1,0 +1,45 @@
+//  ## MODULE - HEADER  -------------------------------------------------------------//
+
+.app-header {
+    background-color: rgba(0,0,0,0.1);
+    box-sizing: border-box;
+    height: 60px;
+    padding: 10px;
+    width: 100%;
+}
+
+.app-header img {
+    height: auto;
+    left: 10px;
+    position: absolute;
+    top: 10px;
+    width: 50px;
+}
+
+.app-header h1 {
+    font-size: 20px;
+    left: 65px;
+    line-height: 50px;
+    margin: 0;
+    position: absolute;
+    top: 12px;
+}
+
+.app-logout.cta {
+    margin: 0;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.app-logout.cta a {
+    background-color: rgba(200,0,0,0.6);
+    border-color: rgba(200,0,0,0.6);
+    line-height: 38px;
+}
+
+.app-logout.cta a:hover {
+    background-color: rgba(200,0,0,0.8);
+    border-color: rgba(200,0,0,0.8);
+}
+

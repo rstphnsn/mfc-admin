@@ -1,0 +1,128 @@
+//  ## FORMS  -----------------------------------------------------------------------//
+
+fieldset {
+    border: 0;
+    border-top: 1px solid $base--ruleColor;
+    margin: 0 0 20px;
+    padding: 20px 0;
+}
+
+legend {
+    padding: 0 20px 0 0;
+}
+
+form fieldset div {
+    margin: 0 0 20px;
+}
+
+form fieldset div:last-child {
+    margin: 0;
+}
+
+label {
+    display: block;
+    float: left;
+    margin: 0;
+    width: 100%;
+}
+
+label .help {
+    color: rgba(0, 0, 0, 0.3);
+    float: right;
+    font-size: 0.8em;
+}
+
+input[type=text],
+input[type=number],
+input[type=email],
+input[type=date],
+input[type=password],
+textarea {
+    background-color: #FFF;
+    border: 0;
+    border-radius: 0;
+    box-sizing: border-box;
+    padding: 10px;
+    width: 100%;
+}
+
+textarea {
+    border-radius: 0;
+    line-height: 30px;
+    min-height: 140px;
+    overflow-y: scroll;
+    padding: 5px;
+    resize: none;
+}
+
+input[type=text]:disabled,
+input[type=number]:disabled,
+input[type=email]:disabled,
+input[type=date]:disabled,
+input[type=password]:disabled,
+textarea:disabled {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+input[type=text].ng-dirty,
+input[type=number].ng-dirty,
+input[type=email].ng-dirty,
+input[type=date].ng-dirty,
+input[type=password].ng-dirty,
+textarea.ng-dirty {
+    background-color: #FFC;
+}
+
+input[type=text].ng-invalid-pattern {
+    background-color: #EEB4B4;
+}
+
+input[type=text].ng-touched.ng-invalid-required,
+input[type=email].ng-touched.ng-invalid-required,
+input[type=password].ng-touched.ng-invalid-required {
+    background-color: #EEC6C1;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button,
+input[type=date]::-webkit-inner-spin-button,
+input[type=date]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+::-webkit-input-placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+:-moz-placeholder { // Firefox 18-
+    color: #999;
+    font-style: italic;
+}
+
+::-moz-placeholder {  // Firefox 19+
+    color: #999;
+    font-style: italic;
+}
+
+:-ms-input-placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+form ul {
+    margin: 0;
+}
+
+.form-buttons {
+    overflow: hidden;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+.form-buttons .cta,
+.form-buttons input {
+    float: right;
+    margin: 0 0 0 10px;
+}

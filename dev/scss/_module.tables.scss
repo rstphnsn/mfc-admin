@@ -1,0 +1,51 @@
+//  ## TABLES  ----------------------------------------------------------------------//
+
+table {
+    margin-bottom: 50px;
+    width: 100%;
+    border-left: 1px solid #111;
+    border-top: 1px solid #111;
+}
+
+th {
+    background-color: rgba(0, 0, 0, 0.3);
+    font-size: 0.8125rem; // 16px
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    border-bottom: 1px solid #111;
+    border-right: 1px solid #111;
+}
+
+td {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #111;
+    border-right: 1px solid #111;
+    line-height: 1.5625; // 25px
+}
+
+th,
+td {
+    padding: 2px 5px;
+    text-align: left;
+    vertical-align: top;
+}
+
+tr.checkedin td {
+    background-color: #CFFFBF;
+}
+
+td input[type=number] {
+    width: auto;
+}
+
+
+//  ## MEDIA QUERIES  --------------------------------------------------------------//
+
+@media screen and (min-width: $breakpoint-one) {
+
+    th,
+    td {
+        padding: 5px 10px;
+    }
+}

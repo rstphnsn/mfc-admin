@@ -1,0 +1,84 @@
+//  ## UI OVERRIDES  ----------------------------------------------------------------//
+
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a,
+:focus {
+    outline: none !important;
+}
+
+
+//  ## COMMON  ----------------------------------------------------------------------//
+
+figure {
+    border: 1px solid #999;
+    overflow: hidden;
+    padding: 5px;
+}
+
+figure img {
+    float: left;
+    height: auto;
+    width: 100%;
+}
+
+
+//  ## MESSAGES  --------------------------------------------------------------------//
+
+.message {
+    background-color: lightgreen;
+    border: 1px solid lightgreen;
+    box-sizing: border-box;
+    color: green;
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    line-height: 38px;
+    margin: 0 0 40px;
+    padding: 2px 12px 0 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.message p {
+    margin: 0;
+}
+
+.message-error {
+    background-color: #EEC6C1;
+    border: 1px solid #EEC6C1;
+    color: #CF5F5F;
+}
+
+
+//  ## LOADER  ----------------------------------------------------------------------//
+
+#loader  {
+    animation: rotate 0.6s linear infinite;
+    border-bottom: 6px solid rgba(255, 255, 255, 0);
+    border-left: 6px solid rgba(255, 255, 255, 0.65);
+    border-radius: 100%;
+    border-right: 6px solid rgba(255, 255, 255, 0.65);
+    border-top: 6px solid rgba(255, 255, 255, 0.65);
+    content: "";
+    display: block;
+    height: 40px;
+    left: 50%;
+    margin: -20px 0 0 -20px;
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    width: 40px;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotateZ(-360deg);
+    }
+    100% {
+        transform: rotateZ(0deg);
+    }
+}
